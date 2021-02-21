@@ -3,17 +3,23 @@ package lesson3oop;
 public class Plate {
     private int food;
 
+    public int getFood() {
+        return food;
+    }
+
     public Plate(int food) {
         this.food = food;
     }
 
     public void decreaseFood(int n) {
-        if (n <= food) {
             food -= n;
-        } else System.out.println("еды слишком мало");
     }
 
     public void info() {
         System.out.println("plate: " + food);
+    }
+    public void takeEat(){
+        if (food<20){food+=10;
+            System.out.println("Сыплю корм!!");}
     }
 }
